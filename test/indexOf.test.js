@@ -26,4 +26,11 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  it('returns -1 if givent an empty array', () => {
+    expect(_.indexOf([], 'bar', 2)).toBe(-1);
+  });
+
+  it('returns -1 if givent a non-array', () => {
+    expect(_.indexOf(3, 'bar', 2)).toBe(-1);
+  });
 });

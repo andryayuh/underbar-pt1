@@ -23,4 +23,10 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('returns an empty array when the callback isn\'t met', () => {
+    const friends = ['nicole', 'rachel', 'weston', 'andrew', 'olivia'];
+    const isAFriend = _.filter(friends, friend => friend === 'patrick');  
+    expect(isAFriend).toEqual([]);
+  });
 });

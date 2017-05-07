@@ -18,4 +18,8 @@ describe('isArrayLike()', () => {
     };
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
+
+  it('returns false for a boolean', () => {
+    expect(_.isArrayLike(true)).toBe(false);
+  });  
 });

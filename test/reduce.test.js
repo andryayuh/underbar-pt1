@@ -13,4 +13,13 @@ describe('reduce()', () => {
     expect(result).toEqual(15);
   });
 
+  it('iterates every element of the array *with* explicit initial value for accumulator', () => {
+    const nums = [1, 2, 3, 4, 5];
+    let count = 0;
+    let current = [];
+    _.reduce(nums, (currentValue, currentIndexOrKey, iteratedObj) => {
+      count += 1;
+    }, 0);
+    expect(count).toBe(5);
+  });
 });

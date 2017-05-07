@@ -14,8 +14,13 @@ describe('reject()', () => {
       drink: null,
       dessert: 'cookie'
     };
-
     const orderItems = _.reject(order, (value) => value === null);
     expect(orderItems).toEqual(['burger', 'ketchup', 'cookie']);
+  });
+
+  it('returns an array', () => {
+    const nums = [2, 4, 5, 6, 7, 8, 10, 11];
+    const evens = _.reject(nums, num => num % 2 === 1);
+    expect(_.isArrayLike(evens)).toBe(true);
   });
 });

@@ -31,4 +31,8 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  it('returns false if not given an object', () => {
+    const dogs = 'dogs'
+    expect(_.contains(dogs, 5)).toBe(false);
+  });
 });

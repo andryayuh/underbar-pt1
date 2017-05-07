@@ -39,5 +39,9 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  it('returns undefined', () => {
+    expect(_.each([1, 2, 3])).toEqual(undefined);
+  });
 });
 
